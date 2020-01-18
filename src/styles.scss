@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~ngx-toastr/toastr.css";
+
+@keyframes ldio-v3gmfbr7cda {
+  0% { transform: rotate(0) }
+  100% { transform: rotate(360deg) }
+}
+.ldio-v3gmfbr7cda div { box-sizing: border-box!important }
+.ldio-v3gmfbr7cda > div {
+  position: absolute;
+  width: 61.07px;
+  height: 61.07px;
+  top: 67.965px;
+  left: 67.965px;
+  border-radius: 50%;
+  border: 5.91px solid #000;
+  border-color: #fe718d transparent #fe718d transparent;
+  animation: ldio-v3gmfbr7cda 0.7246376811594202s linear infinite;
+}
+.ldio-v3gmfbr7cda > div:nth-child(2) { border-color: transparent }
+.ldio-v3gmfbr7cda > div:nth-child(2) div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(45deg);
+}
+.ldio-v3gmfbr7cda > div:nth-child(2) div:before, .ldio-v3gmfbr7cda > div:nth-child(2) div:after { 
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5.91px;
+  height: 5.91px;
+  top: -5.91px;
+  left: 21.669999999999998px;
+  background: #fe718d;
+  border-radius: 50%;
+  box-shadow: 0 55.16px 0 0 #fe718d;
+}
+.ldio-v3gmfbr7cda > div:nth-child(2) div:after { 
+  left: -5.91px;
+  top: 21.669999999999998px;
+  box-shadow: 55.16px 0 0 0 #fe718d;
+}
+.loadingio-spinner-dual-ring-pz5nha717pj {
+  width: 197px;
+  height: 197px;
+  display: inline-block;
+  overflow: hidden;
+  background: none;
+}
+.ldio-v3gmfbr7cda {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.ldio-v3gmfbr7cda div { box-sizing: content-box; }
