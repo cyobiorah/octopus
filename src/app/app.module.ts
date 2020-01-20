@@ -17,6 +17,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { AuthGuardService } from './app.guard';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 const Formio = require('formiojs').Formio;
 Formio.icons = 'fontawesome';
@@ -34,6 +36,7 @@ Formio.icons = 'fontawesome';
     AppRoutingModule,
     // FormioModule,
     ToastrModule.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     // NgxMaskModule.forRoot(options),
   ],
   declarations: [

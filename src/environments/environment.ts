@@ -2,14 +2,18 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment = {
-  // app api
+interface AppEnv {
+  production: boolean;
+  baseUri: string;
+}
+
+export const environment: AppEnv = {
   production: false,
   baseUri: 'https://hankali.herokuapp.com/v1/',
 
   // form io api's
-  appUrl: 'https://example.form.io',
-  apiUrl: 'https://api.form.io'
+  // appUrl: 'https://example.form.io',
+  // apiUrl: 'https://api.form.io'
 };
 
 /*
