@@ -35,9 +35,9 @@ export class FormBuilderComponent implements OnInit {
     console.log(event.form);
   }
 
-  onSubmit(submission: any) {
-    console.log('here');
-    console.log(submission); // This will print out the full submission from Form.io API.
-  }
+  // onSubmit(submission: any) {
+  //   console.log('here');
+  //   console.log(submission); // This will print out the full submission from Form.io API.
+  // }
 
 }
