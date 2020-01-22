@@ -99,7 +99,7 @@
           <h3 class="mb-0">Demo Form Content Here</h3>
         </div>
         <div class="card-body border-0">
-          <form-builder [form]="{components: []}" (change)="onChange($event)"></form-builder>
+          <form-builder [form]="{components: []}" (change)="onChange($event)" (submit)="onSubmit($event)"></form-builder>
           <div class="well jsonviewer">
             <pre id="json"><code class="language-json" #json></code></pre>
           </div>

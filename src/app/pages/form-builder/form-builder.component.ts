@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Output } from '@angular/core';
 import { FormioAppConfig } from 'angular-formio';
+import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-form-builder',
@@ -8,6 +9,8 @@ import { FormioAppConfig } from 'angular-formio';
 })
 export class FormBuilderComponent implements OnInit {
   @ViewChild('json') jsonElement?: ElementRef;
+  @Output()
+  // formioEvent = new EventEmitter<FormioEvent>();
   public form: Object = {
     components: []
   };
@@ -29,8 +32,12 @@ export class FormBuilderComponent implements OnInit {
   // }
 
   onChange(event) {
+    console.log(event.form);
+  }
+
+  onSubmit(submission: any) {
     console.log('here');
-    console.log(event);
+    console.log(submission); // This will print out the full submission from Form.io API.
   }
 
 }

@@ -5,6 +5,8 @@
 interface AppEnv {
   production: boolean;
   baseUri: string;
+  appUrl: string;
+  apiUrl: string;
 }
 
 export const environment: AppEnv = {
@@ -12,8 +14,8 @@ export const environment: AppEnv = {
   baseUri: 'https://hankali.herokuapp.com/v1/',
 
   // form io api's
-  // appUrl: 'https://example.form.io',
-  // apiUrl: 'https://api.form.io'
+  appUrl: 'https://example.form.io',
+  apiUrl: 'https://api.form.io'
 };
 
 /*

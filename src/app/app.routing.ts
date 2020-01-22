@@ -8,34 +8,20 @@ import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component
 import { AuthGuardService } from './app.guard';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   {
-    path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
-  }, {
-    path: '',
-    component: AdminLayoutComponent,
-    children: [
+    path: '', component: AdminLayoutComponent, children: [
       {
-        path: '',
-        loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule',
-        // canLoad: [AuthGuardService],
+        path: '', loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule', canActivate: [AuthGuardService]
       }
     ]
-  }, {
-    path: '',
-    component: AuthLayoutComponent,
-    children: [
-      {
-        path: '',
-        loadChildren: './layouts/auth-layout/auth-layout.module#AuthLayoutModule',
-        // canLoad: [AuthGuardService],
-      }
+  },
+  {
+    path: '', component: AuthLayoutComponent, children: [
+      { path: '', loadChildren: './layouts/auth-layout/auth-layout.module#AuthLayoutModule' }
     ]
-  }, {
-    path: '**',
-    redirectTo: 'dashboard'
-  }
+  },
+  { path: '**', redirectTo: 'dashboard' }
 ];
 
 @NgModule({
