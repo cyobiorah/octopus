@@ -8,6 +8,7 @@ import { EventEmitter } from 'protractor';
   styleUrls: ['./form-builder.component.scss']
 })
 export class FormBuilderComponent implements OnInit {
+  formComponents: any;
   @ViewChild('json') jsonElement?: ElementRef;
   @Output()
   // formioEvent = new EventEmitter<FormioEvent>();
@@ -32,7 +33,8 @@ export class FormBuilderComponent implements OnInit {
   // }
 
   onChange(event) {
-    console.log(event.form);
+    this.formComponents = event.form;
+    console.log(this.formComponents);
   }
 
   // onSubmit(submission: any) {
